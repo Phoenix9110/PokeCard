@@ -1,0 +1,108 @@
+:root{
+    --dark_cyan: hsl(185, 75%, 39%);
+    --very_dark_desaturated_blue: hsl(229, 23%, 23%);
+    --dark_grayish_blue: hsl(227, 10%, 46%);    
+    --dark_gray: hsl(0, 0%, 59%);
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;/*1rem 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit; 
+}
+body{
+    background: rgb(114,38,154);
+    background: linear-gradient(90deg, rgba(114,38,154,1) 24%, rgba(203,31,55,1) 55%, rgba(0,212,255,1) 100%);
+    font-family: 'Kumbh Sans', sans-serif; 
+    // background-image:url('../images/bg-pattern-top.svg'),
+    //                  url('../images/bg-pattern-bottom.svg');
+    // background-repeat: no-repeat,
+    //                    no-repeat;
+    // background-position: right 50vw bottom 50vh,
+    //                      left 50vw top 50vh;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+.card{
+    background-color: #fff;
+    width: 326px;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 3px 5px 5px rgba(0,0,0,0.1);
+
+    &-header{
+        width: 100%;
+        display: block;
+        border-style: none;
+        background-color: #d20000;
+        height: 130px;
+        border-bottom: 5px solid #000;
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid #8787875e;
+
+        &-img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid #000;
+            border-radius: 50%;
+            margin-top: calc(-100px - 5px);
+            background-color: #fff;
+        }
+
+        &-title{
+            margin-top: 2rem;
+            font-size:1.8rem;
+            text-transform: capitalize;
+            span{
+                color: var(--dark_gray);
+                font-weight: 400;
+            }
+        }
+
+        &-text{
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: var(--dark_gray);
+        }
+    }
+
+    &-footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        &-social{
+            text-align: center;
+            
+            p{
+                letter-spacing: 1px;
+                color: var(--dark_gray);
+                margin-top: 0.5rem;
+            }
+
+            h3{
+                font-size: 1.9rem;
+                margin-bottom: 0px;
+            }
+        }
+    
+        &-left{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%; 
+        }
+    }
+}
